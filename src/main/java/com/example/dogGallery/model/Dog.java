@@ -21,6 +21,7 @@ public class Dog {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date activeDate = new Date();
+    private String image;
 
     public Dog() {}
 
@@ -54,4 +55,12 @@ public class Dog {
 
     public Date getActiveDate() { return activeDate; }
     public void setActiveDate(Date activeDate) { this.activeDate = activeDate; }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

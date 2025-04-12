@@ -12,6 +12,7 @@ public class DogService {
     @Autowired
     private DogRepository dogRepository;
 
+
     public List<Dog> getAllDogs() {
         return dogRepository.findAll();
     }
@@ -47,4 +48,6 @@ public class DogService {
     public List<Dog> searchDogsByName(String name) {
         return dogRepository.findByNameContaining(name);
     }
+
+    public Dog saveDog(Dog dog) {return dogRepository.save(dog);}
 }
